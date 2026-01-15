@@ -1,0 +1,457 @@
+/* Edit page background (shared with view-page if you want) */
+/* Page wrapper */
+.edit-page {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+  background:
+    radial-gradient(circle at top left, #f4ecff 0%, transparent 45%),
+    radial-gradient(circle at bottom right, #fef3c7 0%, transparent 55%),
+    #f9fafb;
+}
+
+/* Card */
+.edit-card {
+  width: 100%;
+  max-width: 700px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 26px 24px 26px;
+  box-shadow: 0 18px 40px rgba(18, 4, 80, 0.35);
+  border: 1px solid #e5deff;
+}
+
+/* Titles */
+.edit-title {
+  margin: 0 0 4px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4b22cc;
+}
+
+.edit-subtitle {
+  margin: 0 0 18px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Form */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.edit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.edit-field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.edit-field input,
+.edit-field textarea {
+  border-radius: 12px;
+  border: 1px solid #e5deff;
+  padding: 9px 11px;
+  font-size: 0.9rem;
+  color: #111827;
+  background: #f9fafb;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s;
+}
+
+.edit-field textarea {
+  resize: vertical;
+}
+
+.edit-field input:focus,
+.edit-field textarea:focus {
+  border-color: #5d2fe8;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(93, 47, 232, 0.15);
+}
+
+/* Two-column row */
+.edit-two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* Actions */
+.edit-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Cancel button (same as Add) */
+.edit-actions .btn-secondary {
+  background: #f4ecff;
+  color: #4b22cc;
+  border-radius: 999px;
+  padding: 7px 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.15);
+  transition: background 0.16s, color 0.16s, transform 0.1s;
+}
+
+.edit-actions .btn-secondary:hover {
+  background: #e5deff;
+  color: #321a86;
+  transform: translateY(-1px);
+}
+
+/* Save button: outlined purple filled on hover */
+.edit-save-btn {
+  border-radius: 999px;
+  padding: 7px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(93, 47, 232, 0.55);
+  background: transparent;
+  color: #5d2fe8;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.12);
+  transition: background 0.16s, color 0.16s, transform 0.1s, box-shadow 0.16s;
+}
+
+.edit-save-btn:hover {
+  background: #5d2fe8;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 16px rgba(93, 47, 232, 0.55);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .edit-page {
+    padding: 24px 10px 32px;
+  }
+
+  .edit-card {
+    padding: 20px 16px 22px;
+  }
+
+  .edit-two-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Add page background */
+/* Page wrapper */
+.add-page {
+  min-height: calc(100vh - 140px); /* nav + footer space */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+  background:
+    radial-gradient(circle at top left, #f4ecff 0%, transparent 45%),
+    radial-gradient(circle at bottom right, #fef3c7 0%, transparent 55%),
+    #f9fafb;
+}
+
+/* Card */
+.add-card {
+  width: 100%;
+  max-width: 680px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 26px 24px 26px;
+  box-shadow: 0 18px 40px rgba(18, 4, 80, 0.35);
+  border: 1px solid #e5deff;
+}
+
+/* Titles */
+.add-title {
+  margin: 0 0 6px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4b22cc;
+}
+
+.add-subtitle {
+  margin: 0 0 18px;
+  font-size: 0.92rem;
+  color: #6b7280;
+}
+
+/* Form layout */
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.add-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.add-field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.add-field input,
+.add-field textarea {
+  border-radius: 12px;
+  border: 1px solid #e5deff;
+  padding: 9px 11px;
+  font-size: 0.9rem;
+  color: #111827;
+  background: #f9fafb;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s;
+}
+
+.add-field textarea {
+  resize: vertical;
+}
+
+.add-field input:focus,
+.add-field textarea:focus {
+  border-color: #5d2fe8;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(93, 47, 232, 0.15);
+}
+
+/* Two column row */
+.add-two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* Actions */
+.add-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Cancel button reuses .btn-secondary from list page */
+.add-actions .btn-secondary {
+  background: #f4ecff;
+  color: #4b22cc;
+  border-radius: 999px;
+  padding: 7px 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.15);
+  transition: background 0.16s, color 0.16s, transform 0.1s;
+}
+
+.add-actions .btn-secondary:hover {
+  background: #e5deff;
+  color: #321a86;
+  transform: translateY(-1px);
+}
+
+/* Primary save button */
+.add-save-btn {
+  background: #5d2fe8;
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 7px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(93, 47, 232, 0.55);
+  transition: background 0.16s, transform 0.1s, box-shadow 0.16s;
+}
+
+.add-save-btn:hover {
+  background: #4b22cc;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(75, 34, 204, 0.65);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .add-page {
+    padding: 24px 10px 32px;
+  }
+
+  .add-card {
+    padding: 20px 16px 22px;
+  }
+
+  .add-two-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Login Page Css */
+/* Auth (Login / Register) shared background */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 12px;
+  background:
+    radial-gradient(circle at top left, #f4ecff 0%, transparent 55%),
+    radial-gradient(circle at bottom right, #fef3c7 0%, transparent 55%),
+    #f9fafb;
+}
+
+/* Auth card */
+.auth-card {
+  max-width: 420px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px 24px 26px 24px;
+  box-shadow: 0 18px 40px rgba(18, 4, 80, 0.35);
+  border: 1px solid #e5deff;
+  color: #111827;
+}
+
+/* Titles */
+.auth-title {
+  font-size: 1.6rem;
+  margin: 0;
+  color: #4b22cc;
+  text-align: center;
+}
+
+.auth-subtitle {
+  margin: 6px 0 18px 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* Error message */
+.auth-error {
+  margin-bottom: 14px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  font-size: 0.85rem;
+}
+
+/* Success */
+.auth-success {
+  margin-bottom: 14px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #ecfdf3;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+  font-size: 0.85rem;
+}
+
+/* Form layout */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth-field label {
+  font-size: 0.85rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.auth-field input {
+  border-radius: 10px;
+  border: 1px solid #e5deff;
+  padding: 8px 10px;
+  background: #f9fafb;
+  color: #111827;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s, background 0.18s, transform 0.12s;
+}
+
+.auth-field input::placeholder {
+  color: #9ca3af;
+}
+
+.auth-field input:focus {
+  border-color: #5d2fe8;
+  box-shadow: 0 0 0 2px rgba(93, 47, 232, 0.18);
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Submit button */
+.auth-submit {
+  margin-top: 6px;
+  width: 100%;
+  border-radius: 999px;
+  padding: 9px 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: #5d2fe8;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(93, 47, 232, 0.55);
+  transition: background 0.17s, transform 0.12s, box-shadow 0.17s;
+}
+
+.auth-submit:hover {
+  background: #4b22cc;
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(75, 34, 204, 0.65);
+}
+
+/* Footer text */
+.auth-footer-text {
+  margin-top: 14px;
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+.auth-link {
+  color: #5d2fe8;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 20px 16px 22px 16px;
+  }
+}
+
+
